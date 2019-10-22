@@ -64,6 +64,6 @@
             </div>
           </li>
         </ul>
-        <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="#">Logout</a>
+        <a class="btn btn-bd-download d-none d-lg-inline-block mb-3 mb-md-0 ml-md-3" href="{{ url('/cms/kemhan/logout') }}">Logout</a>
       </div>
     </nav>

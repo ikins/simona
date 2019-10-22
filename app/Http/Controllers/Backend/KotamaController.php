@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Session;
 
-class KemhanController extends Controller
+class KotamaController extends Controller
 {
 
 	private $ctrl 	= 'home';

@@ -15,6 +15,27 @@
 Route::group(['middleware' => 'ValidateKemhan'], function () {
 
 	Route::get('cms/kemhan/dashboard', 'Backend\KemhanController@index');
-	Route::get('cms/logout', 'Backend\KemhanController@signout');
+	Route::get('cms/kemhan/logout', 'Backend\KemhanController@signout');
+
+});
+
+Route::group(['middleware' => 'ValidateUO'], function () {
+
+	Route::get('cms/uo/dashboard', 'Backend\UoController@index');
+	Route::get('cms/uo/logout', 'Backend\UoController@signout');
+
+});
+
+Route::group(['middleware' => 'ValidateKotama'], function () {
+
+	Route::get('cms/kotama/dashboard', 'Backend\KemhanController@index');
+	Route::get('cms/kotama/logout', 'Backend\KemhanController@signout');
+
+});
+
+Route::group(['middleware' => 'ValidateSatker'], function () {
+
+	Route::get('cms/satker/dashboard', 'Backend\KemhanController@index');
+	Route::get('cms/satker/logout', 'Backend\KemhanController@signout');
 
 });

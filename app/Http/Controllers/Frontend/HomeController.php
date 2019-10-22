@@ -53,13 +53,34 @@ class HomeController extends Controller
         {
             return redirect('/')->with('error', 'User Belum Terdaftar');
             exit();
-        }else{
+        }else if(count($user)==1 and $user->user_type==1){
 
             Session::put('loginKemhan',TRUE); 
-            Session::put('status_user','Kementerian Pertahanan Admin');
+            Session::put('status_user','Kemhan Admin');
             Session::put('username', $username);
         
             return redirect('/cms/kemhan/dashboard')->with('success','Signin Berhasil');
+        }else if(count($user)==1 and $user->user_type==2){
+
+            Session::put('loginUO',TRUE); 
+            Session::put('status_user','Unit Organisasi');
+            Session::put('username', $username);
+        
+            return redirect('/cms/uo/dashboard')->with('success','Signin Berhasil');
+        }else if(count($user)==1 and $user->user_type==3){
+
+            Session::put('loginKotama',TRUE); 
+            Session::put('status_user','Kotama');
+            Session::put('username', $username);
+        
+            return redirect('/cms/kotama/dashboard')->with('success','Signin Berhasil');
+        }else if(count($user)==1 and $user->user_type==4){
+
+            Session::put('loginSatker',TRUE); 
+            Session::put('status_user','Satuan Kerja');
+            Session::put('username', $username);
+        
+            return redirect('/cms/satker/dashboard')->with('success','Signin Berhasil');
         } 
 
     }
