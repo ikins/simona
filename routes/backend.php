@@ -17,6 +17,9 @@ Route::group(['middleware' => 'ValidateKemhan'], function () {
 	Route::get('cms/kemhan/dashboard', 'Backend\KemhanController@index');
 	Route::get('cms/kemhan/logout', 'Backend\KemhanController@signout');
 
+	//Anggaran
+	Route::get('cms/kemhan/anggaran', 'Backend\AnggaranController@anggaran');
+
 });
 
 Route::group(['middleware' => 'ValidateUO'], function () {

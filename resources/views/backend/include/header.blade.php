@@ -6,7 +6,7 @@
             <a class="nav-link" href="{{ url('/cms/kemhan/dashboard') }}">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Anggaran</a>
+            <a class="nav-link" href="{{ url('/cms/kemhan/anggaran') }}">Anggaran</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Rencana Penarikan Dana (RPD)</a>
@@ -44,6 +44,12 @@
               <a class="dropdown-item" href="#">Laporan Anggaran Perbatasan</a>
               <a class="dropdown-item" href="#">Laporan Anggaran Pinjaman</a>
               <a class="dropdown-item" href="#">Laporan Anggaran Prioritas</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">RAK</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Jenis Barang</a>
             </div>
           </li>
         </ul>
